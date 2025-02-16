@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('list', '0004_user_email'),
+        ('todolist_app', '0004_user_email'),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 

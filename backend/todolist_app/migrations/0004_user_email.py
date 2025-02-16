@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('list', '0003_alter_user_username'),
+        ('todolist_app', '0003_alter_user_username'),
     ]
 
     operations = [

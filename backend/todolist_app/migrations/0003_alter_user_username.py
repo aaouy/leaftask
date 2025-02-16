@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('list', '0002_alter_task_task_text'),
+        ('todolist_app', '0002_alter_task_task_text'),
     ]
 
     operations = [
