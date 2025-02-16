@@ -1,0 +1,407 @@
+:root {
+    --inconsolata-font: 'Inconsolata', serif;
+    --inter-font: 'Inter', serif
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--inter-font);
+}
+
+.home-section {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-bottom: 10px;
+}
+
+.name-logo-wrapper {
+    display: flex;
+    margin-left: 2%;
+    align-items: center;
+    width: 20%;
+}
+
+#topbar-name {
+    font-size: clamp(15px, 2vw, 40px);
+}
+
+#logo {
+    width: 20%;
+    fill: green;
+}
+
+.topbar {
+    margin-top: 0;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    padding-top: 1%;
+    z-index: 999;
+}
+
+.navbar-wrapper {
+    height: 50%;
+    margin-right: 5%;
+    width: 30%;
+    min-width: 50px;
+}
+
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar-list li {
+    height: 100%;
+    text-align: center;
+}
+
+.navbar-list button {
+    width: 100%;
+    height: 100%;
+    font-family: var(--inter-font);
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    font-size: clamp(13px, 1vw, 20px);
+}
+
+.navbar-list button:hover {
+    color: grey;
+}
+
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+#introduction-phrases {
+    border-right: 3px solid black;
+    animation: blink 0.5s infinite;
+    padding-right: 2px;
+    font-size: 2rem;
+}
+
+@keyframes blink {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+.about-section {
+    padding: 10%;
+    text-align: center;
+    min-height: 50vh;
+    margin-bottom: 10px;
+}
+
+.about-section-content-wrapper {
+    padding: 5%;
+    border: 2px solid green;
+}
+
+.about-section-header-wrapper h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.register-section {
+    height: 100vh;
+    padding: 7% 10%;
+}
+
+.register-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
+    padding-bottom: 5%;
+}
+
+.register-top-section-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    font-family: var(--inter-font);
+    width: 50%;
+    min-width: 200px;
+    position: relative;
+    padding: 2% 0%;
+}
+
+.register h2 {
+    box-sizing: border-box;
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#register-form {
+    min-width: 150px;
+    width: 60%;
+}
+
+.register label {
+    display: block;
+    font-size: 15px;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.register input {
+    width: 100%;
+    height: 30px;
+    font-family: inherit;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    min-width: 150px;
+}
+
+.register input:focus {
+    outline: none;
+}
+
+#submit-register-button {
+    display: block;
+    font-family: inherit;
+    min-width: 70px;
+    width: 30%;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+#register-error {
+    font-size: 15px;
+    margin: 20px;
+    color: red;
+    visibility: hidden;
+    text-align: center;
+}
+
+#has-account {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.login-section {
+    height: 100vh;
+    margin-top: 5%;
+    padding: 10%;
+}
+
+.login-section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid green;
+    padding-bottom: 5%;
+}
+
+.login-top-section-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    font-family: var(--inter-font);
+    width: 50%;
+    height: 70%;
+    min-width: 200px;
+    position: relative;
+}
+
+.login h2 {
+    margin: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#login-form {
+    box-sizing: border-box;
+    width: 60%;
+    min-width: 150px;
+}
+
+.login label {
+    box-sizing: border-box;
+    display: block;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login input {
+    width: 100%;
+    min-width: 150px;
+    height: 30px;
+    font-family: inherit;
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.login input:focus {
+    outline: none;
+}
+
+
+#submit-login-button {
+    display: block;
+    font-family: inherit;
+    width: 30%;
+    margin: 20px auto;
+    cursor: pointer;
+    min-width: 70px;
+}
+
+#login-error {
+    font-size: 15px;
+    margin: 10px;
+    color: red;
+    visibility: hidden;
+    text-align: center;
+}
+
+#no-account {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+@media(max-width: 1024px) {
+    .navbar-wrapper {
+        width:  60%;
+    }
+}
+
+@media(max-width: 700px) {
+    .navbar-wrapper {
+        width:  70%;
+    }
+    .register-section {
+        padding: 3% 0%;
+    }
+    .register {
+        width: 90%;
+    }
+    .login-section {
+        padding: 3% 0%;
+    }
+    .login {
+        width: 80%;
+    }
+    .name-logo-wrapper {
+        width:  30%;
+    }
+}
+
+@media (max-width: 500px) {
+    .login {
+        width: 90%;
+    }
+}
+
+@media (max-height: 750px) {
+    .register-section {
+        height: 150vh;
+    }
+    .login-section {
+        height: 150vh;
+    }
+}
+
+@media (max-height: 600px) {
+    .register-section {
+        height: 170vh;
+    }
+    .login-section {
+        height: 180vh;
+    }
+}
+
+@media (max-height: 500px) {
+    .register-section {
+        height: 190vh;
+    }
+    .login-section {
+        height: 200vh;
+    }
+}
+
+@media (max-height: 450px) {
+    .register-section {
+        height: 210vh;
+    }
+    .login-section {
+        height: 210vh;
+    }
+}
+
+@media (max-height: 400px) {
+    .register-section {
+        height: 250vh;
+    }
+    .login-section {
+        height: 250vh;
+    }
+}
+
+
+
+
+

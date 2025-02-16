@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@104.3,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+    <body>
+        <section id='home-section-id' class="home-section">
+            <div class="topbar">
+                <div class="name-logo-wrapper">
+                    <h1 id="topbar-name">LeafTask</h1>
+                    <svg id='logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="M440-120v-319q-64 0-123-24.5T213-533q-45-45-69-104t-24-123v-80h80q63 0 122 24.5T426-746q31 31 51.5 68t31.5 79q5-7 11-13.5t13-13.5q45-45 104-69.5T760-720h80v80q0 64-24.5 123T746-413q-45 45-103.5 69T520-320v200h-80Zm0-400q0-48-18.5-91.5T369-689q-34-34-77.5-52.5T200-760q0 48 18 92t52 78q34 34 78 52t92 18Zm80 120q48 0 91.5-18t77.5-52q34-34 52.5-78t18.5-92q-48 0-92 18.5T590-569q-34 34-52 77.5T520-400Zm0 0Zm-80-120Z"/></svg>
+                </div>
+                <div class="navbar-wrapper">
+                    <ul class="navbar-list">
+                        <li>
+                            <a href="#home-section-id">
+                                <button id="home-button">Home</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about-section-id">
+                                <button id="about-button">About</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#register-section-id">
+                                <button id="register-button">Register</button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#login-section-id">
+                                <button id="login-button">Login</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-body">
+                <div class="welcome-wrapper">
+                    <h1 id="introduction-phrases"></h1>
+                </div>
+            </div>
+        </section>
+        <section id="about-section-id" class="about-section">
+            <div class="about-section-content-wrapper">
+                <div class="about-section-header-wrapper">
+                    <h1>About</h1>
+                </div>
+                <div class="about-us-container">
+                    <div class="about-text">
+                        <p>
+                            This was made with the intent of learning to create a fullstack application. 
+                            The frontend was created using HTML, CSS and Javascript, while the backend
+                            was created using the Django Rest Framework. 
+                        </p>
+                        <p> This project is by no means perfect, but it served as an effective way for me to learn the aforementioned 
+                            programming languages/frameworks. I have certainly learnt a lot from this project, and I am excited to look back at it in the future to
+                            see my improvement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="register-section-id" class="register-section">
+            <div class="register-section-container">
+                <div class="register-top-section-container">
+                    <h1>Register</h1>
+                </div>
+                <div class="register">
+                    <h2>Register</h2>
+                    <form id='register-form' action="">
+                        <label for="email">Email:</label>
+                        <input type="email" id="register-email" placeholder="Enter your email..">
+                        <label for="username">Username:</label>
+                        <input type="text" id="register-username" placeholder="Enter your username..">
+                        <label for="password">Password:</label>
+                        <input type="password" id="register-password" placeholder="Enter your password..">
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="register-confirm_password" placeholder="Confirm your password.."><br>
+                        <input id='submit-register-button' type="submit" value="Sign Up">
+                    </form>
+                    <p id="register-error">Account already exists! Click below to login.</p>
+                    <p id="has-account">Already have an account? Click <a href="#login-section-id">here</a> to login.</p>
+                </div>
+            </div>
+        </section>
+        <section id="login-section-id" class="login-section">
+            <div class="login-section-container">
+                <div class="login-top-section-container">
+                    <h1>Login</h1>
+                </div>
+                <div class="login">
+                    <h2>Login</h2>
+                    <form id='login-form' action="">
+                        <label for="username">Username:</label>
+                        <input type="username" id="login-username" placeholder="Username..">
+                        <label for="password">Password:</label>
+                        <input type="password" id="login-password" placeholder="Password..">
+                        <input id='submit-login-button' type="submit" value="Log In">
+                    </form>
+                    <p id="login-error"></p>
+                    <p id="no-account">Don't have an account? Click <a href="#register-section-id">here</a> to register.</p>
+                </div>      
+            </div>
+        </section>
+        <script type="module" src="config.js"></script>
+        <script type="module" src="functions.js"></script>
+        <script type="module" src="home.js"></script>
+    </body>
+</html>

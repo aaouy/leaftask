@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="notes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@104.3,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="nav-bar">
+            <button id="nav-bar-button">
+                <svg id='nav-bar-button-img' xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="M172-278v-28h616v28H172Zm0-188v-28h616v28H172Zm0-188v-28h616v28H172Z"/></svg>        
+            </button>
+            <ul class="nav-bar-list">
+                <li id="logout">
+                    <button id="logout-button">Logout</button>
+                </li>
+                <li id="delete-acc">
+                    <button id="delete-acc-button">Delete Account</button>
+                </li>
+            </ul>
+        </div>
+        <div class="theme-change-wrapper">
+            <button id="theme-change">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 28q-62 0-105-43t-43-105q0-62 43-105t105-43q62 0 105 43t43 105q0 62-43 105t-105 43ZM200-466H66v-28h134v28Zm694 0H760v-28h134v28ZM466-760v-134h28v134h-28Zm0 694v-134h28v134h-28ZM274-668l-82-80 19-21 81 81-18 20Zm475 477-81-81 18-20 82 80-19 21Zm-81-495 80-82 21 19-81 81-20-18ZM191-211l81-81 18 18-79 83-20-20Zm289-269Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="undefined"><path d="M483-172q-128.33 0-218.17-89.83Q175-351.67 175-480q0-113 71.5-197.5T425-783q-14 28-22 59t-8 64q0 111.67 78.17 189.83Q551.33-392 663-392q33 0 64-8t58-22q-20 107-104.5 178.5T483-172Zm0-28q88 0 158-48.5T743-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T367-660q0-20 3-40t8-40q-78 32-126.5 102T203-480q0 116 82 198t198 82Zm-10-270Z"/></svg>
+            </button>
+        </div>
+    </div>
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <p id="uncompleted-tasks"></p>
+            <ul id="note-list"></ul>
+        </div>
+    </div>
+    <dialog class="create-note-overlay"> 
+        <button id="create-note-exit-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
+        </button>
+        <h1 id="create-note-title">Create Note</h1>
+        <form id='create-note-form'action="">
+            <div class="create-note-components">
+                <label for="create-note-description">Task:</label>
+                <textarea name="" id="create-note-description" placeholder="Start typing.."></textarea>
+                <input id='submit-note' type="submit" value="Add Task">
+            </div>
+        </form>
+    </dialog>
+    <dialog class="edit-note-overlay"> 
+        <button id="edit-note-exit-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
+        </button>
+        <h1 id="edit-note-title">Edit Note</h1>
+        <form id='edit-note'action="">
+            <div class="edit-note-components">
+                <label for="edit-note-description">Task:</label>
+                <textarea name="" id="edit-note-description" placeholder="Start typing.."></textarea>
+                <input id='edit-note-submit' type="submit" value="Edit Task">
+            </div>
+        </form>
+    </dialog>
+    <dialog class="logout-overlay">
+        <h1>Are you sure you want to logout?</h1>
+        <button id="logout-exit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
+        </button>
+        <div class="logout-options">
+            <button id="logout-yes">Yes</button>
+            <button id="logout-no">No</button>
+        </div>
+    </dialog>
+    <dialog class="delete-acc-overlay">
+        <h1>Are you sure you want to delete your account?</h1>
+        <button id="delete-acc-exit">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
+        </button>
+        <div class="delete-acc-options">
+            <button id="delete-acc-yes">Yes</button>
+            <button id="delete-acc-no">No</button>
+        </div>
+    </dialog>
+    <div class="bottom-bar">
+        <button id="add-task">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="undefined"><path d="M467.5-308.5H493V-467h158.5v-25.5H493v-159h-25.5v159h-159v25.5h159v158.5ZM480.24-137q-71.15 0-133.87-27.02-62.72-27.03-109.12-73.35-46.4-46.33-73.32-108.83Q137-408.7 137-479.76q0-71.15 27.02-133.87 27.03-62.72 73.35-109.12 46.33-46.4 108.83-73.32Q408.7-823 479.76-823q71.15 0 133.87 27.02 62.72 27.03 109.12 73.35 46.4 46.33 73.32 108.83Q823-551.3 823-480.24q0 71.15-27.02 133.87-27.03 62.72-73.35 109.12-46.33 46.4-108.83 73.32Q551.3-137 480.24-137Zm-.27-25.5q132.53 0 225.03-92.47 92.5-92.46 92.5-225 0-132.53-92.47-225.03-92.46-92.5-225-92.5-132.53 0-225.03 92.47-92.5 92.46-92.5 225 0 132.53 92.47 225.03 92.46 92.5 225 92.5ZM480-480Z"/></svg>  
+        </button>
+    </div>
+    <script type="module" src="config.js"></script>
+    <script type="module" src="functions.js"></script>
+    <script type="module" src="notes.js"></script>
+</body>
+</html>
