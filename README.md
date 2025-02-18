@@ -1,7 +1,20 @@
 # Leaftask
-A simple full-stack todolist application. The Frontend was made using HTML, CSS and JS while the backend was made with the Django Rest Framework and PostgreSQL. The application is deployed on AWS and can be visited via the URL: https://leaftask.click/
+A simple full-stack todolist application.
+- **Frontend**: HTML, CSS and JS.
+- **Backend**: Django Rest Framework and PostgreSQL.
+- **Deployment**: AWS (Backend: Fargate, Frontend: S3 and CloudFront) 
 
-This repository can be cloned and run via the Docker command `docker compose up --build`. Please ensure Docker is installed on your computer beforehand.
+The website can be visited via the URL: https://leaftask.click/
+
+## Running Locally With Docker
+
+This repository can be cloned and run via the Docker command:
+
+`docker compose up --build`. 
+
+Please ensure Docker is installed on your computer beforehand.
+
+## Environment Variables
 
 The environment variables that must be set before running are:
 - `DJANGO_ENV`: This should have a value of `production` or `development`
@@ -10,8 +23,8 @@ The environment variables that must be set before running are:
 - `DEV_DB_USER`: The username of the database user.
 - `DEV_DB_PASSWORD`: The password of the database user.
 - `DEV_DB_HOST`: The host of the database user.
-  
-It is recommended to define these environment variables in a `.env` file.
+
+For production, `replace DEV_DB_*` variables with `PROD_DB_*` as needed. It is recommended to define these environment variables in a `.env` file.
   
 
 
