@@ -28,7 +28,6 @@ class TaskListCreate(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         serializer.save(author=self.request.user) #serializer.save() calls serializer.create() which calls task.objects.create()
     
-
 class TaskDestroy(generics.DestroyAPIView):
     serializer_class = TaskSerializer
     authentication_classes = [JWTAuthentication]

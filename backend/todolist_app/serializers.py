@@ -33,6 +33,7 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ["id", "author", "content"]
         extra_kwargs = {"author": {"read_only": True}}
         
-        
+    
+
     
         
