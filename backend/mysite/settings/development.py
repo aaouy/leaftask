@@ -2,7 +2,7 @@ from .base import *
 import os
 
 DEBUG = True
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'testserver', '0.0.0.0']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
